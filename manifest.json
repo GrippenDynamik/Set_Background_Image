@@ -1,0 +1,20 @@
+{
+	"manifest_version": 3,
+	"name": "Set Background Image",
+	"version": "1.0",
+	"action": {
+		"default_title": "Set Background Image"
+	},
+	"background": {
+		"service_worker": "background.js"
+	},
+	"content_scripts": [
+		{
+			"matches": ["*://*/*"],
+			"js": ["/js/content_script.js"]
+		}
+	],
+	"permissions": [
+		"storage"
+	]
+}
